@@ -6,4 +6,10 @@ class Download:
         self.url = url
 
     def downloadVideo(self):
-        YouTube(self.url).streams.first().download()
+        yt = YouTube(self.url).streams.first().download()
+        print(yt.title)
+
+#debuing is valid
+if __name__ == "__main__":
+    dow = Download("URL")
+    dow.downloadVideo()
